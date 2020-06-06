@@ -29,7 +29,10 @@ type StringBuilder struct {
 
 // WString 写入字符串
 func (w *Writer) WString(str string) *Writer {
-	return w.WBytes([]byte(str))
+	if w.Err == nil {
+		_, w.Err = io.WriteString(w, str)
+	}
+	return w
 }
 
 // WByte 写入单个字节内容
