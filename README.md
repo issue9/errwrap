@@ -1,6 +1,5 @@
 errwrap
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fissue9%2Ferrwrap%2Fbadge%3Fref%3Dmaster&style=flat)](https://actions-badge.atrox.dev/issue9/errwrap/goto?ref=master)
-[![Build Status](https://travis-ci.org/issue9/errwrap.svg?branch=master)](https://travis-ci.org/issue9/errwrap)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT)
 [![codecov](https://codecov.io/gh/issue9/errwrap/branch/master/graph/badge.svg)](https://codecov.io/gh/issue9/errwrap)
 ======
