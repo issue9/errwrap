@@ -3,6 +3,7 @@
 package errwrap
 
 import (
+	"errors"
 	"testing"
 
 	"github.com/issue9/assert"
@@ -17,4 +18,8 @@ func TestBuffer(t *testing.T) {
 
 	a.Equal(buf.String(), "12345678910\n").
 		NotError(buf.Err)
+
+	buf.Err = errors.New("error")
+	buf.Reset()
+	a.Empty(buf.String()).Nil(buf.Err)
 }
