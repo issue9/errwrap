@@ -5,11 +5,11 @@ package errwrap
 import (
 	"testing"
 
-	"github.com/issue9/assert"
+	"github.com/issue9/assert/v2"
 )
 
 func TestStringBuilder(t *testing.T) {
-	a := assert.New(t)
+	a := assert.New(t, false)
 
 	builder := &StringBuilder{}
 	builder.WString("123").WRunes([]rune("456")).WByte('7').

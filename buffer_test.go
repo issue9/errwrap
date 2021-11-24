@@ -6,11 +6,11 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/issue9/assert"
+	"github.com/issue9/assert/v2"
 )
 
 func TestBuffer(t *testing.T) {
-	a := assert.New(t)
+	a := assert.New(t, false)
 
 	buf := &Buffer{}
 	buf.WString("123").WRunes([]rune("456")).WByte('7').
