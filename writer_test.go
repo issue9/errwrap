@@ -6,7 +6,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/issue9/assert/v2"
+	"github.com/issue9/assert/v3"
 )
 
 func TestWriter(t *testing.T) {
