@@ -3,6 +3,7 @@ errwrap
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT)
 [![codecov](https://codecov.io/gh/issue9/errwrap/branch/master/graph/badge.svg)](https://codecov.io/gh/issue9/errwrap)
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/issue9/errwrap)](https://pkg.go.dev/github.com/issue9/errwrap)
+![Go version](https://img.shields.io/github/go-mod/go-version/issue9/errwrap)
 ======
 
 errwrap 提供了对常用对象需要连续处理 error 的简单封闭。

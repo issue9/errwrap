@@ -16,5 +16,6 @@
 
 .idea/
 .vscode/
+.vs/
 *.swp
 .DS_Store
