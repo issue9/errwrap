@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2020-2024 caixw
+// SPDX-FileCopyrightText: 2020-2025 caixw
 //
 // SPDX-License-Identifier: MIT
 
@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// StringBuilder 提供缓存错误的 strings.Buffer
+// StringBuilder 提供缓存错误的 [strings.Buffer]
 type StringBuilder struct {
 	strings.Builder
 	Err error

@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2020-2024 caixw
+// SPDX-FileCopyrightText: 2020-2025 caixw
 //
 // SPDX-License-Identifier: MIT
 
@@ -9,7 +9,7 @@ import (
 	"fmt"
 )
 
-// Buffer 提供缓存错误的 bytes.Buffer
+// Buffer 提供缓存错误的 [bytes.Buffer]
 type Buffer struct {
 	bytes.Buffer
 	Err error
