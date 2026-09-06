@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2020-2024 caixw
+// SPDX-FileCopyrightText: 2020-2026 caixw
 //
 // SPDX-License-Identifier: MIT
 
@@ -47,7 +47,7 @@ func (w *Writer) WRunes(rs []rune) *Writer {
 }
 
 // Print 相当于 fmt.Fprint(builder, v...)
-func (w *Writer) Print(v ...interface{}) *Writer {
+func (w *Writer) Print(v ...any) *Writer {
 	if w.Err == nil {
 		_, w.Err = fmt.Fprint(w, v...)
 	}
@@ -55,7 +55,7 @@ func (w *Writer) Print(v ...interface{}) *Writer {
 }
 
 // Println 相当于 fmt.Fprintln(builder, v...)
-func (w *Writer) Println(v ...interface{}) *Writer {
+func (w *Writer) Println(v ...any) *Writer {
 	if w.Err == nil {
 		_, w.Err = fmt.Fprintln(w, v...)
 	}
@@ -63,7 +63,7 @@ func (w *Writer) Println(v ...interface{}) *Writer {
 }
 
 // Printf 相当于 fmt.Fprintf(builder, format, v...)
-func (w *Writer) Printf(format string, v ...interface{}) *Writer {
+func (w *Writer) Printf(format string, v ...any) *Writer {
 	if w.Err == nil {
 		_, w.Err = fmt.Fprintf(w, format, v...)
 	}

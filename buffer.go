@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2020-2025 caixw
+// SPDX-FileCopyrightText: 2020-2026 caixw
 //
 // SPDX-License-Identifier: MIT
 
@@ -53,7 +53,7 @@ func (w *Buffer) WRunes(rs []rune) *Buffer {
 }
 
 // Print 相当于 fmt.Fprint(builder, v...)
-func (w *Buffer) Print(v ...interface{}) *Buffer {
+func (w *Buffer) Print(v ...any) *Buffer {
 	if w.Err == nil {
 		_, w.Err = fmt.Fprint(w, v...)
 	}
@@ -61,7 +61,7 @@ func (w *Buffer) Print(v ...interface{}) *Buffer {
 }
 
 // Println 相当于 fmt.Fprintln(builder, v...)
-func (w *Buffer) Println(v ...interface{}) *Buffer {
+func (w *Buffer) Println(v ...any) *Buffer {
 	if w.Err == nil {
 		_, w.Err = fmt.Fprintln(w, v...)
 	}
@@ -69,7 +69,7 @@ func (w *Buffer) Println(v ...interface{}) *Buffer {
 }
 
 // Printf 相当于 fmt.Fprintf(builder, format, v...)
-func (w *Buffer) Printf(format string, v ...interface{}) *Buffer {
+func (w *Buffer) Printf(format string, v ...any) *Buffer {
 	if w.Err == nil {
 		_, w.Err = fmt.Fprintf(w, format, v...)
 	}

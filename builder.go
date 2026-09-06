@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2020-2025 caixw
+// SPDX-FileCopyrightText: 2020-2026 caixw
 //
 // SPDX-License-Identifier: MIT
 
@@ -53,7 +53,7 @@ func (builder *StringBuilder) WRunes(rs []rune) *StringBuilder {
 }
 
 // Print 相当于 fmt.Fprint(builder, v...)
-func (builder *StringBuilder) Print(v ...interface{}) *StringBuilder {
+func (builder *StringBuilder) Print(v ...any) *StringBuilder {
 	if builder.Err == nil {
 		_, builder.Err = fmt.Fprint(builder, v...)
 	}
@@ -61,7 +61,7 @@ func (builder *StringBuilder) Print(v ...interface{}) *StringBuilder {
 }
 
 // Println 相当于 fmt.Fprintln(builder, v...)
-func (builder *StringBuilder) Println(v ...interface{}) *StringBuilder {
+func (builder *StringBuilder) Println(v ...any) *StringBuilder {
 	if builder.Err == nil {
 		_, builder.Err = fmt.Fprintln(builder, v...)
 	}
@@ -69,7 +69,7 @@ func (builder *StringBuilder) Println(v ...interface{}) *StringBuilder {
 }
 
 // Printf 相当于 fmt.Fprintf(builder, format, v...)
-func (builder *StringBuilder) Printf(format string, v ...interface{}) *StringBuilder {
+func (builder *StringBuilder) Printf(format string, v ...any) *StringBuilder {
 	if builder.Err == nil {
 		_, builder.Err = fmt.Fprintf(builder, format, v...)
 	}
